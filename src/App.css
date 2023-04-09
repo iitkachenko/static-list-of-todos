@@ -1,0 +1,61 @@
+:root {
+    --primary: #21037b;
+    --danger: darkred;
+    --success: darkgreen;
+    --grey: #24212d;
+    --light-grey: #efecf7;
+    --liliac: #c0b9d4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.app {
+    margin: auto;
+    padding: 0 1em 1em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-red {
+    color: var(--danger);
+}
+
+.text-green {
+    color: var(--success);
+}
+
+.text-blue {
+    color: var(--primary);
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+@media screen and (min-width: 800px) {
+    .app {
+        max-width: 800px;
+    }
+}

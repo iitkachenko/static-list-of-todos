@@ -1,0 +1,16 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.cards {
+    counter-reset: card;
+}
+
+@media screen and (min-width: 800px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
