@@ -1,23 +1,22 @@
 import React from 'react';
 import { IUser } from '../../interfaces';
-import { ITodo } from '../../interfaces';
 
 interface IProps {
-  id?: number | undefined;
-  name?: string | undefined;
-  username?: string | undefined;
-  email?: string | undefined;
+  user: IUser | null;
 }
 
-export const UserInfo = (props: IProps/*ITodo["user"]*/) => {
-  // console.log(props);
-  const {name, email} = props;
+export const UserInfo = ({ user }: IProps) => {
+  const { name, email } = user || {name: 'Unknown User', email: ''};
 
   return (
     <div className="card-container mt-1">
       <p className="bold">{name}</p>
       <p>
-        <a href={`mailto:${email}`}>{email}</a></p>
+        {
+          email ? <a href={`mailto:${email}`}>{email}</a>
+                : <span className="text-blue">Unknown Email</span>
+        }
+      </p>  
     </div>
   )
 }

@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export const TodoList = ({ todos }: IProps) => {
-  const todoElts = todos.map(item => <TodoInfo key={item.id} {...item} />);
+  const todoElts = todos.map(todo => <TodoInfo key={todo.id} {...todo} />);
   
   return (
     <div className="cards">{ todoElts }</div>

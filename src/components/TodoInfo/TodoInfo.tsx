@@ -15,7 +15,7 @@ export const TodoInfo = (props: ITodo) => {
       >
         <h2>{title[0].toUpperCase() + title.slice(1)}</h2>
       </div>
-      <UserInfo {...user} />
+      <UserInfo user={user} />
       <p className="card-status card-container">
         Completed: {completed ? <span className="bold text-green">
                                   <span>✓</span>
